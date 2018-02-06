@@ -44,7 +44,7 @@ trait ExecResourceTrait
      *
      * @return null|\Psr\Http\Message\ResponseInterface
      */
-    public function execStart(string $id, \Docker\API\Model\ExecIdStartPostBody $execStartConfig, string $fetch = self::FETCH_OBJECT)
+    public function execStart(string $id, \Docker\API\Model\ExecIdStartPostBody $execStartConfig, array $parameters, string $fetch = self::FETCH_OBJECT)
     {
         $endpoint = new \Docker\API\Endpoint\ExecStart($id, $execStartConfig);
 
